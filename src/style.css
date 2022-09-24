@@ -1,0 +1,144 @@
+:root {
+    --background-color: #0D1B2a;
+    --font-color: #e0e1dd;
+    --borders-color: #fdc352;
+    --cards-color: #415a77;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100vh;
+}
+
+.background {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background:
+    linear-gradient(rgba(13, 27, 42, 0.4), rgba(13, 27, 42, 0.4)),
+    url(.//sunorwind-wpvCV52ikW4-unsplash.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--background-color);
+    filter: blur(2px);
+}
+
+.container {
+    height: 100%;
+    filter: none;
+}
+
+
+
+.navbar {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    background: var(--background-color);
+    border-bottom: 2px solid var(--borders-color);
+}
+
+.logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.buttons {
+    list-style: none;
+}
+.button {
+    display: inline-block;
+    border: 1px solid var(--borders-color);
+    padding: 1rem;
+    margin-left: 0.5rem;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: var(--borders-color);
+    color: var(--background-color);
+    transition: all 0.8s;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+}
+
+.content{
+    background-color: var(--background-color);
+    border: 1px solid var(--borders-color);
+    color: var(--font-color);
+    width: clamp(400px, 60%, 800px);
+    height: 70%;
+    padding: 2%;
+    overflow: auto;
+}
+
+.greetings, .menu-text{
+    color: var(--font-color);
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 2rem;
+}
+
+.intro, .credits, .story {
+    color: var(--font-color);
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.contact, .dish {
+    border: 1px solid #778da9;
+    border-radius: 10px;
+    background-color: linear-gradient(90deg #1b263b #415a77 #778da9);
+    width: 100%;
+    padding: 3%;
+}
+
+.name, .role, .mail, .dish-name, .dish-price, .dish-description
+ {
+    font-size: 1.3rem;
+    color: var(--font-color);
+    margin-bottom: 10px;
+}
+
+.role, .dish-price {
+    font-size: 1rem ;
+    font-weight: bold;
+}
+
+.dish-description {
+    font-style: italic;
+}
+
+
+.footer {
+    height: 10vh;
+    background: var(--background-color);
+    border-top: 2px solid var(--borders-color);
+    color: var(--borders-color);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 500px){
+    .story {
+        font-size: 1.3rem;
+        padding: 5%;
+    }
+}
